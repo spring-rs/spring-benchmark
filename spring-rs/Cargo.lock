@@ -1863,9 +1863,9 @@ dependencies = [
 
 [[package]]
 name = "spring"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2dda89d126f876a6a20defffd404c05a41b113b636aca4f15491addb55440ca"
+checksum = "ba39e1fbe502bae162fb421e194c949337e97191fea7852febaf32fc13aac22b"
 dependencies = [
  "spring-boot",
  "spring-macros",
@@ -1873,9 +1873,9 @@ dependencies = [
 
 [[package]]
 name = "spring-boot"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "152e099488964daf2af990c054fe21c63c97dcecaeb9fc765493d1d66104712c"
+checksum = "485c9700109cf16e1061f6097e90484f4a069b093c080b6ff021e6ac78690e27"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -1897,9 +1897,9 @@ dependencies = [
 
 [[package]]
 name = "spring-macros"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22e3c47b5bf0faf5f91a1726096658dd2c7448bcdae4d89ab16162c86dda3595"
+checksum = "022e52a631d9976e1fc98bb02f21e9f784e4473dac969aaa726404104dbfffba"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1919,9 +1919,9 @@ dependencies = [
 
 [[package]]
 name = "spring-sqlx"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d2680883349961eb41f37d0361dcf641d736f670a9ab2f6c3763f8155d1ad71e"
+checksum = "652867c94abacc5859192ed6c49a271c243aaa014eb3ee565524c4e303705452"
 dependencies = [
  "anyhow",
  "schemars",
@@ -1933,9 +1933,9 @@ dependencies = [
 
 [[package]]
 name = "spring-web"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f39e8358d5c586a0c3916b539bce11661217efb743cbea48f98affbb767433e9"
+checksum = "24c188932a0e6deed60ca7036d0c62023b9cc56ee14744672c72093049df2257"
 dependencies = [
  "anyhow",
  "axum",
