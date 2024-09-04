@@ -1,7 +1,12 @@
 package io.github.holmofy.spring;
 
+import jakarta.annotation.Resource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.SingleColumnRowMapper;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
