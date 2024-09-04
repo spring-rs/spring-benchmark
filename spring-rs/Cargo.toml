@@ -3,6 +3,10 @@ name = "spring-rs"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "spring-rs"
+path = "src/main.rs"
+
 [dependencies]
 spring = "0.0.8"
 spring-web = "0.0.8"

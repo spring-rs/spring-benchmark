@@ -1,2 +1,2 @@
 [sqlx]
-uri = "mysql://root:xudjf23adj213@127.0.0.1:3306"
+uri = "mysql://root:xudjf23adj213@mysql:3306"

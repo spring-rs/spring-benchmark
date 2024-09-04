@@ -9,13 +9,25 @@ services:
       - 3306:3306
 
   java-demo:
+    image: holmofy/java-spring-boot-demo:0.0.1
     build:
       context: ./java-spring-boot
     ports:
-      - 8080:8080
+      - 80:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 1024M
 
   rust-demo:
+    image: holmofy/rust-spring-rs-demo:0.0.1
     build:
       context: ./spring-rs
     ports:
-      - 8080:8080
+      - 88:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 100M
