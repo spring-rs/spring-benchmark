@@ -8,7 +8,7 @@ use spring_web::{
 };
 
 #[auto_config(WebConfigurator)]
-#[tokio::main(flavor = "multi_thread", worker_threads = 8)]
+#[tokio::main(flavor = "multi_thread", worker_threads = 8)] // The number of io-bound threads is set to twice the number of cores
 async fn main() {
     App::new()
         .add_plugin(SqlxPlugin)
