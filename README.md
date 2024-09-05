@@ -20,3 +20,6 @@
 | [**rust-spring-rs-raw-query**](./spring-rs/README.md#raw-query)               | 40143.45 | 150% | 21.2MB  |
 | [**java-springboot-jdbc-query**](./java-spring-boot/README.md#postgres-query) | 9679.59  | 416% | 268.1MB |
 | [**rust-spring-rs-sqlx-query**](./spring-rs/README.md#postgres-query)         | 9250.40  | 317% | 29.47MB |
+
+> **NOTE**: It is recommended to use the postgresql database as the sqlx backend, because the mysql backend performance of sqlx is very poor.
+> The [mysql-benchmark](https://github.com/spring-rs/spring-benchmark/tree/mysql-benchmark) branch has a stress test report.
