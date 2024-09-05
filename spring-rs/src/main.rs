@@ -22,8 +22,8 @@ async fn hello_world() -> impl IntoResponse {
     "hello world"
 }
 
-#[get("/mysql")]
-async fn hello_mysql(Component(db): Component<ConnectPool>) -> Result<String> {
+#[get("/postgres")]
+async fn hello_postgres(Component(db): Component<ConnectPool>) -> Result<String> {
     let version = sqlx::query("select version() as version")
         .fetch_one(&db)
         .await

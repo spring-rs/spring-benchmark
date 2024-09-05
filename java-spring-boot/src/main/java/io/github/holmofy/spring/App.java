@@ -24,8 +24,8 @@ public class App {
         return "hello world";
     }
 
-    @GetMapping("/mysql")
-    String helloMysql() {
+    @GetMapping("/postgres")
+    String helloPostgres() {
         return jdbcTemplate.queryForObject("select version()", SingleColumnRowMapper.newInstance(String.class));
     }
 }
