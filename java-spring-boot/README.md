@@ -75,57 +75,85 @@ Transfer/sec:      2.64MB
 
 ## mysql query
 
-![image](https://github.com/user-attachments/assets/35fb9f51-3237-4e39-848d-f6f5e634a799)
+![image](https://github.com/user-attachments/assets/de34fb43-fb80-4f01-9d80-e2736353449f)
 
 ```sh
-➜  spring-benchmark git:(master) ✗ wrk -t2 -c500 -d120s http://localhost:80/mysql
-Running 2m test @ http://localhost:80/mysql
-  2 threads and 500 connections
+➜  spring-benchmark git:(master) wrk -t2 -c100 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    41.94ms   67.57ms   1.73s    90.26%
-    Req/Sec     3.80k     1.34k   10.91k    74.25%
-  900997 requests in 2.00m, 102.41MB read
-  Socket errors: connect 250, read 0, write 0, timeout 0
-Requests/sec:   7504.09
-Transfer/sec:      0.85MB
-➜  spring-benchmark git:(master) ✗ wrk -t2 -c1000 -d120s http://localhost:80/mysql
-Running 2m test @ http://localhost:80/mysql
-  2 threads and 1000 connections
+    Latency    19.41ms   25.56ms 388.47ms   86.00%
+    Req/Sec     4.15k     1.38k    9.07k    73.57%
+  245471 requests in 30.08s, 27.90MB read
+Requests/sec:   8159.73
+Transfer/sec:      0.93MB
+➜  spring-benchmark git:(master) wrk -t2 -c200 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  2 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    30.18ms   42.71ms 700.16ms   85.29%
-    Req/Sec     4.55k   834.45    10.77k    74.21%
-  1085527 requests in 2.00m, 123.39MB read
-  Socket errors: connect 733, read 0, write 0, timeout 0
-Requests/sec:   9041.37
-Transfer/sec:      1.03MB
-➜  spring-benchmark git:(master) ✗ wrk -t4 -c5000 -d120s http://localhost:80/mysql
-Running 2m test @ http://localhost:80/mysql
-  4 threads and 5000 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    31.50ms   42.64ms 701.43ms   85.69%
-    Req/Sec     2.07k     1.27k    8.64k    64.56%
-  989202 requests in 2.00m, 112.44MB read
-  Socket errors: connect 4741, read 0, write 0, timeout 0
-Requests/sec:   8236.64
+    Latency    32.74ms   36.01ms 402.85ms   85.75%
+    Req/Sec     4.18k     1.16k    8.70k    79.43%
+  249311 requests in 30.07s, 28.34MB read
+Requests/sec:   8292.23
 Transfer/sec:      0.94MB
-➜  spring-benchmark git:(master) ✗ wrk -t4 -c1000 -d120s http://localhost:80/mysql
-Running 2m test @ http://localhost:80/mysql
-  4 threads and 1000 connections
+➜  spring-benchmark git:(master) wrk -t2 -c300 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  2 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    28.14ms   40.32ms 576.57ms   84.57%
-    Req/Sec     2.26k   652.99     5.47k    63.22%
-  1076670 requests in 2.00m, 122.38MB read
-  Socket errors: connect 752, read 0, write 0, timeout 0
-Requests/sec:   8965.55
+    Latency    40.51ms   48.46ms 587.29ms   86.51%
+    Req/Sec     4.55k     1.19k   14.29k    75.34%
+  270281 requests in 30.04s, 30.72MB read
+  Socket errors: connect 38, read 0, write 0, timeout 0
+Requests/sec:   8998.85
 Transfer/sec:      1.02MB
-➜  spring-benchmark git:(master) ✗ wrk -t4 -c2000 -d120s http://localhost:80/mysql
-Running 2m test @ http://localhost:80/mysql
-  4 threads and 2000 connections
+➜  spring-benchmark git:(master) wrk -t3 -c300 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  3 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    28.74ms   41.51ms 608.03ms   85.36%
-    Req/Sec     2.28k   812.99     8.34k    73.96%
-  1088016 requests in 2.00m, 123.67MB read
-  Socket errors: connect 1740, read 0, write 0, timeout 0
-Requests/sec:   9062.26
-Transfer/sec:      1.03MB
+    Latency    40.48ms   47.99ms 526.21ms   86.49%
+    Req/Sec     3.00k     0.92k   11.64k    79.93%
+  268245 requests in 30.09s, 30.49MB read
+  Socket errors: connect 38, read 0, write 0, timeout 0
+Requests/sec:   8914.67
+Transfer/sec:      1.01MB
+➜  spring-benchmark git:(master) wrk -t4 -c300 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  4 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.14ms   46.99ms 512.82ms   86.05%
+    Req/Sec     2.12k   733.16     5.51k    72.82%
+  251377 requests in 30.01s, 28.57MB read
+  Socket errors: connect 42, read 0, write 0, timeout 0
+Requests/sec:   8376.72
+Transfer/sec:      0.95MB
+➜  spring-benchmark git:(master) wrk -t5 -c300 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  5 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.00ms   46.95ms 571.79ms   86.15%
+    Req/Sec     1.69k   536.42     4.83k    74.50%
+  251957 requests in 30.06s, 28.64MB read
+  Socket errors: connect 43, read 0, write 0, timeout 0
+Requests/sec:   8383.10
+Transfer/sec:      0.95MB
+➜  spring-benchmark git:(master) wrk -t5 -c400 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  5 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.22ms   43.55ms 495.39ms   85.41%
+    Req/Sec     1.72k   761.90     5.92k    69.03%
+  255709 requests in 30.07s, 29.06MB read
+  Socket errors: connect 155, read 0, write 0, timeout 0
+Requests/sec:   8504.22
+Transfer/sec:      0.97MB
+➜  spring-benchmark git:(master) wrk -t6 -c300 -d30s http://localhost:80/mysql
+Running 30s test @ http://localhost:80/mysql
+  6 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.09ms   46.18ms 580.08ms   86.29%
+    Req/Sec     1.50k   639.33    15.59k    83.71%
+  268486 requests in 30.08s, 30.52MB read
+  Socket errors: connect 35, read 0, write 0, timeout 0
+Requests/sec:   8926.69
+Transfer/sec:      1.01MB
 ```
