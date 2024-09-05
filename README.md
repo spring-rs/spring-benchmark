@@ -14,6 +14,10 @@
 
 ## benchmark summary
 
+| CPU                                             | Memory     | Docker                               |
+| ----------------------------------------------- | ---------- | -------------------------------------|
+| 13th Gen Intel(R) Core(TM) i7-13700H   2.40 GHz | 16.0 GB    | Docker version 25.0.3, build 4debf41 |
+
 | case                                                                          | QPS      | CPU  | Memory  |
 |-------------------------------------------------------------------------------|----------|------|---------|
 | [**java-springboot-raw-query**](./java-spring-boot/README.md#raw-query)       | 24805.60 | 350% | 234.6MB |
