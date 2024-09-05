@@ -74,7 +74,7 @@ Transfer/sec:      3.98MB
 
 ## postgres query
 
-![image](https://github.com/user-attachments/assets/6d2c33c7-0853-44ce-a9fc-ea1a48e21893)
+![image](https://github.com/user-attachments/assets/c8df67f2-f0b3-42c5-a2ea-2ed335d4ea65)
 
 ```sh
 ➜  spring-benchmark git:(master) ✗ wrk -t8 -c300 -d30s http://localhost:88/postgres
