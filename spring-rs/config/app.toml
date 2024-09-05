@@ -1,2 +1,2 @@
 [sqlx]
-uri = "mysql://root:xudjf23adj213@mysql:3306"
+uri = "postgres://postgres:xudjf23adj213@postgres:5432"
