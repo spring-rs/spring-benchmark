@@ -9,7 +9,7 @@ services:
       - 5432:5432
 
   java-demo:
-    image: holmofy/java-spring-boot-demo:0.0.1
+    image: holmofy/java-spring-boot-demo-pg:0.0.1
     build:
       context: ./java-spring-boot
     ports:
@@ -21,7 +21,7 @@ services:
           memory: 1024M
 
   rust-demo:
-    image: holmofy/rust-spring-rs-demo:0.0.1
+    image: holmofy/rust-spring-rs-demo-pg:0.0.1
     build:
       context: ./spring-rs
     ports:
