@@ -1,3 +1,10 @@
+## build target
+
+| case                 | target                          | size          |
+|----------------------|---------------------------------|---------------|
+| **java-springboot**  | spring-0.0.1-SNAPSHOT.jar       | 23.42MB       |
+| **rust-spring-rs**   | spring-rs(release binary)       | 10.99MB       |
+
 ## docker image
 
 | case                 | BaseImage                       | ImageSize      |
