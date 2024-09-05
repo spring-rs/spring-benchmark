@@ -73,87 +73,79 @@ Requests/sec:  22111.39
 Transfer/sec:      2.64MB
 ```
 
-## mysql query
+## postgres query
 
-![image](https://github.com/user-attachments/assets/de34fb43-fb80-4f01-9d80-e2736353449f)
+![image](https://github.com/user-attachments/assets/c9f8f8ee-faf5-4e67-add5-877200c2d9ca)
 
 ```sh
-➜  spring-benchmark git:(master) wrk -t2 -c100 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
-  2 threads and 100 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    19.41ms   25.56ms 388.47ms   86.00%
-    Req/Sec     4.15k     1.38k    9.07k    73.57%
-  245471 requests in 30.08s, 27.90MB read
-Requests/sec:   8159.73
-Transfer/sec:      0.93MB
-➜  spring-benchmark git:(master) wrk -t2 -c200 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
-  2 threads and 200 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    32.74ms   36.01ms 402.85ms   85.75%
-    Req/Sec     4.18k     1.16k    8.70k    79.43%
-  249311 requests in 30.07s, 28.34MB read
-Requests/sec:   8292.23
-Transfer/sec:      0.94MB
-➜  spring-benchmark git:(master) wrk -t2 -c300 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
+➜  spring-benchmark git:(master) ✗ wrk -t2 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
   2 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    40.51ms   48.46ms 587.29ms   86.51%
-    Req/Sec     4.55k     1.19k   14.29k    75.34%
-  270281 requests in 30.04s, 30.72MB read
-  Socket errors: connect 38, read 0, write 0, timeout 0
-Requests/sec:   8998.85
-Transfer/sec:      1.02MB
-➜  spring-benchmark git:(master) wrk -t3 -c300 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
+    Latency    66.44ms  109.70ms   1.79s    91.30%
+    Req/Sec     3.42k     1.69k    8.90k    68.26%
+  199923 requests in 30.03s, 42.55MB read
+  Socket errors: connect 46, read 0, write 0, timeout 0
+Requests/sec:   6657.37
+Transfer/sec:      1.42MB
+➜  spring-benchmark git:(master) wrk -t3 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
   3 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    40.48ms   47.99ms 526.21ms   86.49%
-    Req/Sec     3.00k     0.92k   11.64k    79.93%
-  268245 requests in 30.09s, 30.49MB read
+    Latency    37.41ms   44.71ms 595.52ms   86.56%
+    Req/Sec     3.27k     1.01k   13.91k    74.19%
+  291281 requests in 30.09s, 62.00MB read
   Socket errors: connect 38, read 0, write 0, timeout 0
-Requests/sec:   8914.67
-Transfer/sec:      1.01MB
-➜  spring-benchmark git:(master) wrk -t4 -c300 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
+Requests/sec:   9679.59
+Transfer/sec:      2.06MB
+➜  spring-benchmark git:(master) wrk -t4 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
   4 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    41.14ms   46.99ms 512.82ms   86.05%
-    Req/Sec     2.12k   733.16     5.51k    72.82%
-  251377 requests in 30.01s, 28.57MB read
-  Socket errors: connect 42, read 0, write 0, timeout 0
-Requests/sec:   8376.72
-Transfer/sec:      0.95MB
-➜  spring-benchmark git:(master) wrk -t5 -c300 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
+    Latency    37.81ms   43.29ms 466.73ms   85.87%
+    Req/Sec     2.28k   727.13    10.01k    71.92%
+  270397 requests in 30.05s, 57.55MB read
+  Socket errors: connect 44, read 0, write 0, timeout 0
+Requests/sec:   8999.69
+Transfer/sec:      1.92MB
+➜  spring-benchmark git:(master) wrk -t5 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
   5 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    41.00ms   46.95ms 571.79ms   86.15%
-    Req/Sec     1.69k   536.42     4.83k    74.50%
-  251957 requests in 30.06s, 28.64MB read
-  Socket errors: connect 43, read 0, write 0, timeout 0
-Requests/sec:   8383.10
-Transfer/sec:      0.95MB
-➜  spring-benchmark git:(master) wrk -t5 -c400 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
-  5 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    35.22ms   43.55ms 495.39ms   85.41%
-    Req/Sec     1.72k   761.90     5.92k    69.03%
-  255709 requests in 30.07s, 29.06MB read
-  Socket errors: connect 155, read 0, write 0, timeout 0
-Requests/sec:   8504.22
-Transfer/sec:      0.97MB
-➜  spring-benchmark git:(master) wrk -t6 -c300 -d30s http://localhost:80/mysql
-Running 30s test @ http://localhost:80/mysql
+    Latency    36.75ms   42.11ms 492.87ms   85.97%
+    Req/Sec     1.96k   733.57    14.51k    79.68%
+  290955 requests in 30.03s, 61.93MB read
+  Socket errors: connect 35, read 0, write 0, timeout 0
+Requests/sec:   9689.35
+Transfer/sec:      2.06MB
+➜  spring-benchmark git:(master) wrk -t6 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
   6 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    40.09ms   46.18ms 580.08ms   86.29%
-    Req/Sec     1.50k   639.33    15.59k    83.71%
-  268486 requests in 30.08s, 30.52MB read
+    Latency    37.38ms   42.98ms 580.67ms   86.03%
+    Req/Sec     1.55k   339.93     7.37k    84.47%
+  277572 requests in 30.10s, 59.08MB read
+  Socket errors: connect 41, read 0, write 0, timeout 0
+Requests/sec:   9222.97
+Transfer/sec:      1.96MB
+➜  spring-benchmark git:(master) wrk -t7 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
+  7 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.90ms   43.67ms 537.51ms   85.94%
+    Req/Sec     1.26k   399.09     8.77k    75.96%
+  264188 requests in 30.10s, 56.23MB read
   Socket errors: connect 35, read 0, write 0, timeout 0
-Requests/sec:   8926.69
-Transfer/sec:      1.01MB
+Requests/sec:   8777.32
+Transfer/sec:      1.87MB
+➜  spring-benchmark git:(master) wrk -t8 -c300 -d30s http://localhost:80/postgres
+Running 30s test @ http://localhost:80/postgres
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.09ms   45.58ms 623.66ms   86.37%
+    Req/Sec     1.07k   444.44    13.00k    84.43%
+  254931 requests in 30.04s, 54.26MB read
+  Socket errors: connect 29, read 0, write 0, timeout 0
+Requests/sec:   8485.15
+Transfer/sec:      1.81MB
 ```
