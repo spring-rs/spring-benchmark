@@ -1,3 +1,12 @@
+## docker image
+
+| case                 | BaseImage                       | ImageSize      |
+|----------------------|---------------------------------|----------------|
+| **java-springboot**  | openjdk:17-jdk-slim(407.74 MB)  | 431.17MB       |
+| **rust-spring-rs**   | debian:bookworm-slim(74.77 MB)  | 124.37MB       |
+
+## benchmark summary
+
 | case                           | QPS      | CPU  | Memory  |
 |--------------------------------|----------|------|---------|
 | **java-springboot-raw-query**  | 24805.60 | 350% | 234.6MB |
