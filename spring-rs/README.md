@@ -230,62 +230,226 @@ Benchmark completed. Results saved to result/spring-rs-raw/result_t8_c500.txt
 ![image](https://github.com/user-attachments/assets/c8df67f2-f0b3-42c5-a2ea-2ed335d4ea65)
 
 ```sh
-➜  spring-benchmark git:(master) ✗ wrk -t8 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
-  8 threads and 300 connections
+>>>>> Benchmark API: http://localhost:88/postgres
+>>>>> Benchmark Result Dir: result/spring-rs-pg
+Benchmarking: threads=2, connections=100, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    36.00ms    7.40ms 137.77ms   80.52%
-    Req/Sec     1.03k   234.94     2.38k    87.89%
-  247031 requests in 30.09s, 53.24MB read
-Requests/sec:   8208.51
-Transfer/sec:      1.77MB
-➜  spring-benchmark git:(master) ✗ wrk -t7 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
-  7 threads and 300 connections
+    Latency    13.67ms    6.27ms 119.75ms   88.82%
+    Req/Sec     3.77k     1.14k    6.24k    65.47%
+  450409 requests in 1.00m, 97.08MB read
+Requests/sec:   7497.66
+Transfer/sec:      1.62MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t2_c100.txt
+----------------------------------------
+Benchmarking: threads=2, connections=200, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  2 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    35.53ms    9.88ms  77.58ms   72.20%
-    Req/Sec     1.19k   400.66     7.00k    89.31%
-  247734 requests in 30.10s, 53.39MB read
-Requests/sec:   8231.19
-Transfer/sec:      1.77MB
-➜  spring-benchmark git:(master) ✗ wrk -t6 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
-  6 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    40.10ms   13.68ms 134.40ms   75.21%
-    Req/Sec     1.25k   529.68    11.19k    89.48%
-  223155 requests in 30.09s, 48.10MB read
-  Socket errors: connect 2, read 0, write 0, timeout 0
-Requests/sec:   7415.35
-Transfer/sec:      1.60MB
-➜  spring-benchmark git:(master) ✗ wrk -t5 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
-  5 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    32.07ms    7.52ms  68.88ms   73.14%
-    Req/Sec     1.87k   473.42     4.83k    85.64%
-  278112 requests in 30.06s, 59.94MB read
-  Socket errors: connect 2, read 0, write 0, timeout 0
-Requests/sec:   9250.40
-Transfer/sec:      1.99MB
-➜  spring-benchmark git:(master) ✗ wrk -t4 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
-  4 threads and 300 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    34.52ms    7.00ms  71.11ms   80.97%
-    Req/Sec     2.17k   520.98     6.91k    90.36%
-  257449 requests in 30.05s, 55.49MB read
-  Socket errors: connect 2, read 0, write 0, timeout 0
-Requests/sec:   8568.04
-Transfer/sec:      1.85MB
-➜  spring-benchmark git:(master) ✗ wrk -t2 -c300 -d30s http://localhost:88/postgres
-Running 30s test @ http://localhost:88/postgres
+    Latency    22.47ms    7.48ms 123.54ms   85.65%
+    Req/Sec     4.51k     1.12k    6.62k    67.00%
+  539135 requests in 1.00m, 116.20MB read
+Requests/sec:   8974.30
+Transfer/sec:      1.93MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t2_c200.txt
+----------------------------------------
+Benchmarking: threads=2, connections=300, duration=60s
+Running 1m test @ http://localhost:88/postgres
   2 threads and 300 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    35.52ms    9.54ms  88.20ms   78.88%
-    Req/Sec     4.20k     1.18k    9.48k    83.78%
-  249985 requests in 30.07s, 53.88MB read
-  Socket errors: connect 3, read 0, write 0, timeout 0
-Requests/sec:   8312.06
+    Latency    36.55ms   14.12ms 219.15ms   87.97%
+    Req/Sec     4.19k     1.23k    6.60k    63.61%
+  499563 requests in 1.00m, 107.67MB read
+Requests/sec:   8314.32
 Transfer/sec:      1.79MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t2_c300.txt
+----------------------------------------
+Benchmarking: threads=2, connections=400, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  2 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    54.93ms   18.08ms 285.43ms   86.44%
+    Req/Sec     3.70k     0.96k    5.87k    70.37%
+  441112 requests in 1.00m, 95.07MB read
+Requests/sec:   7341.55
+Transfer/sec:      1.58MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t2_c400.txt
+----------------------------------------
+Benchmarking: threads=2, connections=500, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  2 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    61.38ms   22.19ms 327.31ms   87.12%
+    Req/Sec     4.13k     1.18k    6.24k    62.94%
+  493038 requests in 1.00m, 106.26MB read
+Requests/sec:   8214.54
+Transfer/sec:      1.77MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t2_c500.txt
+----------------------------------------
+Benchmarking: threads=4, connections=100, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.85ms    4.58ms 141.50ms   89.00%
+    Req/Sec     2.15k   519.36     3.30k    68.20%
+  514527 requests in 1.00m, 110.90MB read
+Requests/sec:   8563.42
+Transfer/sec:      1.85MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t4_c100.txt
+----------------------------------------
+Benchmarking: threads=4, connections=200, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  4 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.13ms    6.66ms 108.05ms   84.45%
+    Req/Sec     2.29k   533.36     3.38k    67.46%
+  546187 requests in 1.00m, 117.72MB read
+Requests/sec:   9095.72
+Transfer/sec:      1.96MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t4_c200.txt
+----------------------------------------
+Benchmarking: threads=4, connections=300, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  4 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.82ms    9.82ms 127.51ms   83.86%
+    Req/Sec     2.11k   467.28     3.16k    68.77%
+  504861 requests in 1.00m, 108.81MB read
+Requests/sec:   8405.94
+Transfer/sec:      1.81MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t4_c300.txt
+----------------------------------------
+Benchmarking: threads=4, connections=400, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  4 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.74ms   13.69ms 153.63ms   81.17%
+    Req/Sec     2.21k   570.89     3.45k    65.29%
+  527544 requests in 1.00m, 113.70MB read
+Requests/sec:   8777.81
+Transfer/sec:      1.89MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t4_c400.txt
+----------------------------------------
+Benchmarking: threads=4, connections=500, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  4 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.43ms   18.22ms 239.52ms   80.05%
+    Req/Sec     2.02k   518.01     3.08k    62.23%
+  481551 requests in 1.00m, 103.79MB read
+Requests/sec:   8014.90
+Transfer/sec:      1.73MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t4_c500.txt
+----------------------------------------
+Benchmarking: threads=6, connections=100, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  6 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.04ms    4.59ms 102.38ms   85.57%
+    Req/Sec     1.35k   351.66     2.19k    68.69%
+  485618 requests in 1.00m, 104.67MB read
+Requests/sec:   8082.35
+Transfer/sec:      1.74MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t6_c100.txt
+----------------------------------------
+Benchmarking: threads=6, connections=200, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  6 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.23ms    7.98ms 122.57ms   85.34%
+    Req/Sec     1.33k   322.07     2.03k    68.22%
+  475348 requests in 1.00m, 102.45MB read
+Requests/sec:   7910.49
+Transfer/sec:      1.70MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t6_c200.txt
+----------------------------------------
+Benchmarking: threads=6, connections=300, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  6 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.99ms   11.97ms 156.58ms   82.37%
+    Req/Sec     1.33k   342.42     2.09k    68.04%
+  477272 requests in 1.00m, 102.87MB read
+Requests/sec:   7942.47
+Transfer/sec:      1.71MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t6_c300.txt
+----------------------------------------
+Benchmarking: threads=6, connections=400, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  6 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    48.82ms   14.25ms 156.39ms   82.25%
+    Req/Sec     1.37k   336.30     2.23k    66.81%
+  489197 requests in 1.00m, 105.44MB read
+Requests/sec:   8143.04
+Transfer/sec:      1.76MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t6_c400.txt
+----------------------------------------
+Benchmarking: threads=6, connections=500, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  6 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    63.83ms   18.83ms 262.21ms   82.78%
+    Req/Sec     1.31k   333.34     2.03k    66.60%
+  470387 requests in 1.00m, 101.38MB read
+Requests/sec:   7828.99
+Transfer/sec:      1.69MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t6_c500.txt
+----------------------------------------
+Benchmarking: threads=8, connections=100, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.15ms    5.86ms 129.83ms   88.96%
+    Req/Sec     0.94k   263.58     1.52k    63.96%
+  447268 requests in 1.00m, 96.40MB read
+Requests/sec:   7447.95
+Transfer/sec:      1.61MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t8_c100.txt
+----------------------------------------
+Benchmarking: threads=8, connections=200, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  8 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.54ms    9.73ms 120.13ms   82.54%
+    Req/Sec     0.99k   312.31     2.38k    61.03%
+  475266 requests in 1.00m, 102.43MB read
+Requests/sec:   7908.74
+Transfer/sec:      1.70MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t8_c200.txt
+----------------------------------------
+Benchmarking: threads=8, connections=300, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  8 threads and 300 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.76ms   15.01ms 187.88ms   80.81%
+    Req/Sec     0.86k   246.69     1.46k    66.28%
+  409222 requests in 1.00m, 88.20MB read
+Requests/sec:   6810.64
+Transfer/sec:      1.47MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t8_c300.txt
+----------------------------------------
+Benchmarking: threads=8, connections=400, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  8 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    51.97ms   16.99ms 211.63ms   81.41%
+    Req/Sec     0.97k   270.82     2.43k    67.09%
+  465647 requests in 1.00m, 100.36MB read
+Requests/sec:   7749.89
+Transfer/sec:      1.67MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t8_c400.txt
+----------------------------------------
+Benchmarking: threads=8, connections=500, duration=60s
+Running 1m test @ http://localhost:88/postgres
+  8 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.00ms   13.58ms 181.54ms   84.08%
+    Req/Sec     1.11k   232.57     1.67k    70.21%
+  532947 requests in 1.00m, 114.87MB read
+Requests/sec:   8872.62
+Transfer/sec:      1.91MB
+Benchmark completed. Results saved to result/spring-rs-pg/result_t8_c500.txt
+----------------------------------------
 ```
