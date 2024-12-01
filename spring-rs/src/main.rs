@@ -1,8 +1,9 @@
 use anyhow::Context;
-use spring::{auto_config, get, App};
+use spring::{auto_config, App};
 use spring_sqlx::sqlx::Row;
 use spring_sqlx::ConnectPool;
 use spring_sqlx::{sqlx, SqlxPlugin};
+use spring_web::get;
 use spring_web::{
     axum::response::IntoResponse, error::Result, extractor::Component, WebConfigurator, WebPlugin,
 };
