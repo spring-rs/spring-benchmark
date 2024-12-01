@@ -1,6 +1,6 @@
-## raw query
+![无标题](https://github.com/user-attachments/assets/086a6cb3-34a6-42b9-b269-adc80a988376)
 
-![image](https://github.com/user-attachments/assets/8610f889-3105-4a16-964c-0e899e4eda23)
+## raw query
 
 ```sh
 >>>>> Benchmark API: http://localhost:80
@@ -228,8 +228,6 @@ Benchmark completed. Results saved to result/spring-boot-raw/result_t8_c500.txt
 ```
 
 ## postgres query
-
-![image](https://github.com/user-attachments/assets/c9f8f8ee-faf5-4e67-add5-877200c2d9ca)
 
 ```sh
 >>>>> Benchmark API: http://localhost:80/postgres
